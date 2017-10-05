@@ -39,6 +39,6 @@ public class Grader {
 	
 	public Map<Gender, List<Person>> getFailingStudentsByGender(){
 		Stream<Person> stream = Arrays.stream(mathClass);
-		return stream.filter(p -> p.isFailing()).collect(Collectors.groupingBy(Person::getGender));
+		return stream.filter(Person::isFailing).collect(Collectors.groupingBy(Person::getGender));
 	}
 }

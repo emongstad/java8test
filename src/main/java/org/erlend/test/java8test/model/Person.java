@@ -1,7 +1,7 @@
 package org.erlend.test.java8test.model;
 
 public class Person {
-	public static double failLimit = 4.0d;
+	private static double FAIL_LIMIT = 4.0d;
 
 	private String name;
 
@@ -53,6 +53,6 @@ public class Person {
 	}
 
 	public boolean isFailing() {
-		return grade > failLimit;
+		return grade > FAIL_LIMIT;
 	}
 }
