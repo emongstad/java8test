@@ -43,7 +43,7 @@ public class IBANCreator {
     }
 
     /**
-     * Calculate MOD97 for an account recursive
+     * Calculate MOD97 for an account recursively
      */
     private int calculateMOD97(String ibanAccount) {
         if (ibanAccount.length() > 9) {

@@ -14,14 +14,14 @@ public class TestJava8 {
     @Test
     public void testLambda() throws Exception {
         List<String> list = Arrays.asList("one", "two ", " three");
-        list.stream().forEach(String::format);
+        list.forEach(String::format);
         list.stream().map(String::trim).forEach(System.out::println);
         list.stream().map(s -> {
             s.charAt(0);
             return s.trim();
         }).forEach(System.out::println);
         list.stream().map(String::trim).forEach(System.out::println);
-        list.stream().forEach(String::new);
+        list.forEach(String::new);
     }
 
     @Test
